@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - WaterWise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold">WaterWise</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="./landing.html" class="hover:text-blue-300">Inicio</a></li>
+          <li><a href="./landing.html" class="hover:text-blue-300">Características</a></li>
+          <li><a href="./landing.html" class="hover:text-blue-300">Precios</a></li>
+          <li><a href="./landing.html" class="hover:text-blue-300">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Registration Section -->
+  <section class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-6 text-center text-blue-600">Regístrate en WaterWise</h2>
+      <form>
+        <!-- Full Name -->
+        <div class="mb-4">
+          <label for="full-name" class="block text-gray-700 font-semibold mb-2">Nombre Completo</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Ingresa tu nombre completo"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- Email Address -->
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-4">
+          <label for="password" class="block text-gray-700 font-semibold mb-2">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Ingresa una contraseña"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-4">
+          <label for="confirm-password" class="block text-gray-700 font-semibold mb-2">Confirmar Contraseña</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirma tu contraseña"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- Plan Selection -->
+        <div class="mb-4">
+          <label for="plan" class="block text-gray-700 font-semibold mb-2">Selecciona tu Plan</label>
+          <select id="plan" name="plan"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+            <option value="basic">Paquete Básico - $29/mes</option>
+            <option value="advanced">Paquete Avanzado - $59/mes</option>
+            <option value="premium">Paquete Premium - $99/mes</option>
+          </select>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="mb-4">
+          <label class="inline-flex items-center">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+            <span class="ml-2 text-gray-700">Acepto los <a href="#" class="text-blue-600 hover:underline">términos y
+                condiciones</a></span>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="button" onclick="window.location.href = './index.html'"
+            class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-bold hover:bg-blue-700 focus:outline-none focus:bg-blue-700">Regístrate</button>
+        </div>
+      </form>
+
+      <p class="text-center text-gray-600 mt-4">¿Ya tienes una cuenta? <a href="./login.html"
+          class="text-blue-600 hover:underline">Inicia sesión aquí</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-4">
+    <div class="container mx-auto">
+      <p>&copy; 2024 WaterWise. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

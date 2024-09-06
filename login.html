@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - WaterWise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold">WaterWise</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="hover:text-blue-300">Inicio</a></li>
+          <li><a href="#features" class="hover:text-blue-300">Características</a></li>
+          <li><a href="#pricing" class="hover:text-blue-300">Precios</a></li>
+          <li><a href="#contact" class="hover:text-blue-300">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <section class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-6 text-center text-blue-600">Inicia Sesión en WaterWise</h2>
+      <form>
+        <!-- Email Address -->
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-4">
+          <label for="password" class="block text-gray-700 font-semibold mb-2">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- Remember Me -->
+        <div class="mb-4 flex items-center justify-between">
+          <label class="inline-flex items-center">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+            <span class="ml-2 text-gray-700">Recordarme</span>
+          </label>
+          <a href="#" class="text-blue-600 hover:underline">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="button" onclick="window.location.href = './index.html'"
+            class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-bold hover:bg-blue-700 focus:outline-none focus:bg-blue-700">Iniciar
+            Sesión</button>
+        </div>
+      </form>
+
+      <p class="text-center text-gray-600 mt-4">¿No tienes una cuenta? <a href="./login.html"
+          class="text-blue-600 hover:underline">Regístrate aquí</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-4">
+    <div class="container mx-auto">
+      <p>&copy; 2024 WaterWise. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

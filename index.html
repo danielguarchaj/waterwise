@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WaterWise Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">WaterWise Dashboard</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#estadisticas" class="hover:text-blue-300">Estadísticas</a></li>
+          <li><a href="#alertas" class="hover:text-blue-300">Alertas</a></li>
+          <li><a href="./landing.html" class="hover:text-blue-300">Configuración</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto mt-8 p-4">
+    <!-- Resumen de datos -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-lg font-semibold text-blue-600">Consumo Diario</h2>
+        <p class="text-4xl font-bold mt-4">120 L</p>
+        <p class="text-gray-500">Total registrado hoy</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-lg font-semibold text-blue-600">Consumo promedio</h2>
+        <p class="text-4xl font-bold mt-4">129 L</p>
+        <p class="text-gray-500">Por mes</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-lg font-semibold text-blue-600">Sensores Activos</h2>
+        <p class="text-4xl font-bold mt-4">12</p>
+        <p class="text-gray-500">Sensores conectados</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-lg font-semibold text-blue-600">Alertas Críticas</h2>
+        <p class="text-4xl font-bold mt-4">3</p>
+        <p class="text-gray-500">En las últimas 24 horas</p>
+      </div>
+    </section>
+
+    <!-- Sección de Alertas -->
+    <section class="mt-8" id="alertas">
+      <h2 class="text-2xl font-semibold text-gray-700">Alertas Recientes</h2>
+      <ul class="mt-4 space-y-2">
+        <li class="bg-red-100 border border-red-300 p-4 rounded-lg shadow-lg">
+          <strong class="text-red-600">Alerta:</strong> Consumo inusualmente alto en el sensor #5.
+          <span class="block text-gray-500">Hace 2 horas</span>
+        </li>
+        <li class="bg-yellow-100 border border-yellow-300 p-4 rounded-lg shadow-lg">
+          <strong class="text-yellow-600">Advertencia:</strong> Sensor #8 ha dejado de enviar datos.
+          <span class="block text-gray-500">Hace 4 horas</span>
+        </li>
+        <li class="bg-green-100 border border-green-300 p-4 rounded-lg shadow-lg">
+          <strong class="text-green-600">Info:</strong> El mantenimiento del sensor #2 fue exitoso.
+          <span class="block text-gray-500">Hace 1 día</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Sección de Tabla de Consumo -->
+    <section class="mt-8">
+      <h2 class="text-2xl font-semibold text-gray-700">Registro de Consumo de Agua</h2>
+      <div class="overflow-x-auto mt-4">
+        <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+          <thead>
+            <tr class="bg-gray-200 text-gray-600">
+              <th class="py-2 px-4 text-left">Fecha</th>
+              <th class="py-2 px-4 text-left">Sensor</th>
+              <th class="py-2 px-4 text-left">Consumo (L)</th>
+              <th class="py-2 px-4 text-left">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-2 px-4 border-b">04/09/2024</td>
+              <td class="py-2 px-4 border-b">Sensor #1</td>
+              <td class="py-2 px-4 border-b">80 L</td>
+              <td class="py-2 px-4 border-b text-green-600">Normal</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">04/09/2024</td>
+              <td class="py-2 px-4 border-b">Sensor #5</td>
+              <td class="py-2 px-4 border-b">120 L</td>
+              <td class="py-2 px-4 border-b text-red-600">Alto Consumo</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">03/09/2024</td>
+              <td class="py-2 px-4 border-b">Sensor #3</td>
+              <td class="py-2 px-4 border-b">50 L</td>
+              <td class="py-2 px-4 border-b text-green-600">Normal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-3" id="estadisticas">
+      <div class="">
+        <div class="card big-card">
+          <h2>Consumo Total de Agua</h2>
+          <p id="totalWaterUsage" class="data-value">Cargando...</p>
+          <p class="data-subtext">Litros consumidos en el último mes</p>
+        </div>
+
+        <div class="card mt-2">
+          <h2>Estado de Sensores</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID del Sensor</th>
+                <th>Estado</th>
+                <th>Última Verificación</th>
+              </tr>
+            </thead>
+            <tbody id="sensorTable">
+              <tr>
+                <td colspan="3">Cargando sensores...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card big-card mt-3">
+          <h2>Tasa de Flujo de Agua (L/min)</h2>
+          <canvas id="waterFlowChart"></canvas>
+        </div>
+
+        <div class="card mt-3">
+          <h2>Calidad del Agua</h2>
+          <p id="waterQuality">Cargando...</p>
+          <p class="data-subtext">Niveles de pH: Estándar = 6.5 - 8.5</p>
+        </div>
+
+        <div class="card mt-3">
+          <h2>Comparativa de Consumo</h2>
+          <canvas id="consumptionComparisonChart"></canvas>
+          <p class="data-subtext">Consumo de agua por sensores</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>WaterWise &copy; 2024. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

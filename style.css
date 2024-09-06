@@ -1,0 +1,186 @@
+/* Estilos Generales */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #004d40;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subheader {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #bbdefb;
+}
+
+/* Adaptabilidad del Dashboard */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.big-card {
+  grid-column: span 2;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.data-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00796b;
+}
+
+.data-subtext {
+  font-size: 0.9rem;
+  color: #757575;
+}
+
+.data-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.data-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #eeeeee;
+}
+
+.btn {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #004d40;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Media Queries para hacer el diseño responsivo */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .big-card {
+    grid-column: span 1;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .subheader {
+    font-size: 1rem;
+  }
+
+  .data-value {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .subheader {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .data-value {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+}
